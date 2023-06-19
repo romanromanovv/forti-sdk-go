@@ -3,7 +3,7 @@ package fmgclient
 import (
 	"fmt"
 
-	"github.com/fortinetdev/forti-sdk-go/fortimanager/util"
+	"github.com/romanromanovv/forti-sdk-go/fortimanager/util"
 )
 
 // JSONSystemNetworkInterface contains the params for updating network interface setting
@@ -18,9 +18,12 @@ type JSONSystemNetworkInterface struct {
 
 // UpdateSystemNetworkInterface is for updating network interface setting
 // Input:
-//   @params: infor needed
+//
+//	@params: infor needed
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) UpdateSystemNetworkInterface(params *JSONSystemNetworkInterface) (err error) {
 	defer c.Trace("UpdateSystemNetworkInterface")()
 
@@ -41,10 +44,13 @@ func (c *FmgSDKClient) UpdateSystemNetworkInterface(params *JSONSystemNetworkInt
 
 // ReadSystemNetworkInterface is for reading the specific network interface setting
 // Input:
-//   @name: network interface name
+//
+//	@name: network interface name
+//
 // Output:
-//   @out: network interface infor
-//   @err: error details if failure, and nil if success
+//
+//	@out: network interface infor
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) ReadSystemNetworkInterface(name string) (out *JSONSystemNetworkInterface, err error) {
 	defer c.Trace("ReadSystemNetworkInterface")()
 

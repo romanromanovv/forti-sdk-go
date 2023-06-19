@@ -10,9 +10,9 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/fortinetdev/forti-sdk-go/fortianalyzer/auth"
-	"github.com/fortinetdev/forti-sdk-go/fortianalyzer/config"
-	"github.com/fortinetdev/forti-sdk-go/fortianalyzer/request"
+	"github.com/romanromanovv/forti-sdk-go/fortianalyzer/auth"
+	"github.com/romanromanovv/forti-sdk-go/fortianalyzer/config"
+	"github.com/romanromanovv/forti-sdk-go/fortianalyzer/request"
 	// "strconv"
 )
 
@@ -72,7 +72,6 @@ func NewClient(auth *auth.Auth, client *http.Client) *FortiSDKClient {
 	return c
 }
 
-
 func login(auth *auth.Auth, c *FortiSDKClient) {
 	data := make(map[string]interface{})
 	data["method"] = "exec"
@@ -91,7 +90,6 @@ func login(auth *auth.Auth, c *FortiSDKClient) {
 	v2 := make([]map[string]interface{}, 0)
 	v2 = append(v2, paramItem)
 	data["params"] = v2
-
 
 	locJSON, err := json.Marshal(data)
 	if err != nil {
@@ -114,7 +112,6 @@ func login(auth *auth.Auth, c *FortiSDKClient) {
 		err = fmt.Errorf("cannot get response body %v", err)
 		return
 	}
-
 
 	var result map[string]interface{}
 	json.Unmarshal([]byte(string(body)), &result)
@@ -165,7 +162,6 @@ func (c *FortiSDKClient) NewRequest(method string, path string, params interface
 
 // 	var result map[string]interface{}
 // 	json.Unmarshal([]byte(string(body)), &result)
-
 
 // 	if result != nil {
 // 		if result["status"] == nil {

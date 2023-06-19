@@ -3,7 +3,7 @@ package fmgclient
 import (
 	"fmt"
 
-	"github.com/fortinetdev/forti-sdk-go/fortimanager/util"
+	"github.com/romanromanovv/forti-sdk-go/fortimanager/util"
 )
 
 // JSONSystemNTP contains the params for updating NTP setting
@@ -16,9 +16,12 @@ type JSONSystemNTP struct {
 
 // SetSystemNTP is for updating NTP setting
 // Input:
-//   @params: infor needed
+//
+//	@params: infor needed
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) SetSystemNTP(params *JSONSystemNTP) (err error) {
 	defer c.Trace("SetSystemNTP")()
 
@@ -48,8 +51,9 @@ func (c *FmgSDKClient) SetSystemNTP(params *JSONSystemNTP) (err error) {
 
 // ReadSystemNTP is for reading NTP setting
 // Output:
-//   @out: system NTP infor
-//   @err: error details if failure, and nil if success
+//
+//	@out: system NTP infor
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) ReadSystemNTP() (out *JSONSystemNTP, err error) {
 	defer c.Trace("ReadSystemNTP")()
 

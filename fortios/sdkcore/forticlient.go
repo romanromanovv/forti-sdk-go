@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fortinetdev/forti-sdk-go/fortios/auth"
-	"github.com/fortinetdev/forti-sdk-go/fortios/config"
-	"github.com/fortinetdev/forti-sdk-go/fortios/request"
+	"github.com/romanromanovv/forti-sdk-go/fortios/auth"
+	"github.com/romanromanovv/forti-sdk-go/fortios/config"
+	"github.com/romanromanovv/forti-sdk-go/fortios/request"
 	// "strconv"
 )
 
@@ -171,7 +171,7 @@ func fortiAPIErrorFormat(result map[string]interface{}, body string) (err error)
 				}
 
 				if result["cli_error"] != nil {
-					err = fmt.Errorf(err.Error() + "\nCli response: \n%v", result["cli_error"])
+					err = fmt.Errorf(err.Error()+"\nCli response: \n%v", result["cli_error"])
 				}
 
 				return

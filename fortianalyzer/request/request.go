@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fortinetdev/forti-sdk-go/fortianalyzer/config"
+	"github.com/romanromanovv/forti-sdk-go/fortianalyzer/config"
 )
 
 // Request describes the request to FAZ service
@@ -71,7 +71,6 @@ func New(c config.Config, method string, path string, params interface{}, data *
 // Send request data to FAZ.
 // If errors are encountered, it returns the error.
 func (r *Request) Send() error {
-
 
 	//Build FAZ
 	//build Sign/Login INfo

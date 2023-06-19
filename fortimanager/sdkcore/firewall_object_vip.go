@@ -3,7 +3,7 @@ package fmgclient
 import (
 	"fmt"
 
-	"github.com/fortinetdev/forti-sdk-go/fortimanager/util"
+	"github.com/romanromanovv/forti-sdk-go/fortimanager/util"
 )
 
 // JSONFirewallObjectVip contains the params for creating firewall object virtual ip
@@ -21,11 +21,14 @@ type JSONFirewallObjectVip struct {
 
 // CreateUpdateFirewallObjectVip is for creating/updating the firewall object virtual ip
 // Input:
-//   @params: infor needed
-//   @method: operation method, "add" or "update"
-//   @adom: adom
+//
+//	@params: infor needed
+//	@method: operation method, "add" or "update"
+//	@adom: adom
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) CreateUpdateFirewallObjectVip(params *JSONFirewallObjectVip, method, adom string) (err error) {
 	defer c.Trace("CreateUpdateFirewallObjectVip")()
 
@@ -46,11 +49,14 @@ func (c *FmgSDKClient) CreateUpdateFirewallObjectVip(params *JSONFirewallObjectV
 
 // ReadFirewallObjectVip is for reading the specific firewall object virtual ip
 // Input:
-//   @name: firewall object virtual ip name
-//   @adom: adom
+//
+//	@name: firewall object virtual ip name
+//	@adom: adom
+//
 // Output:
-//   @out: firewall object virtual ip infor
-//   @err: error details if failure, and nil if success
+//
+//	@out: firewall object virtual ip infor
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) ReadFirewallObjectVip(adom, name string) (out *JSONFirewallObjectVip, err error) {
 	defer c.Trace("ReadFirewallObjectVip")()
 
@@ -114,10 +120,13 @@ func (c *FmgSDKClient) ReadFirewallObjectVip(adom, name string) (out *JSONFirewa
 
 // DeleteFirewallObjectVip is for deleting the specific firewall object virtual ip
 // Input:
-//   @adom: adom
-//   @name: firewall object virtual ip name
+//
+//	@adom: adom
+//	@name: firewall object virtual ip name
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) DeleteFirewallObjectVip(adom, name string) (err error) {
 	defer c.Trace("DeleteFirewallObjectVip")()
 

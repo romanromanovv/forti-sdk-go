@@ -3,7 +3,7 @@ package fmgclient
 import (
 	"fmt"
 
-	"github.com/fortinetdev/forti-sdk-go/fortimanager/util"
+	"github.com/romanromanovv/forti-sdk-go/fortimanager/util"
 )
 
 // JSONSystemGlobal contains the params for updating system global setting
@@ -17,9 +17,12 @@ type JSONSystemGlobal struct {
 
 // SetSystemGlobal is for updating the system global setting
 // Input:
-//   @params: infor needed
+//
+//	@params: infor needed
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) SetSystemGlobal(params *JSONSystemGlobal) (err error) {
 	defer c.Trace("SetSystemGlobal")()
 
@@ -40,8 +43,9 @@ func (c *FmgSDKClient) SetSystemGlobal(params *JSONSystemGlobal) (err error) {
 
 // ReadSystemGlobal is for reading the system global setting
 // Output:
-//   @out: system global infor
-//   @err: error details if failure, and nil if success
+//
+//	@out: system global infor
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) ReadSystemGlobal() (out *JSONSystemGlobal, err error) {
 	defer c.Trace("ReadSystemGlobal")()
 

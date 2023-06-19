@@ -3,7 +3,7 @@ package fmgclient
 import (
 	"fmt"
 
-	"github.com/fortinetdev/forti-sdk-go/fortimanager/util"
+	"github.com/romanromanovv/forti-sdk-go/fortimanager/util"
 )
 
 // JSONFirewallObjectService contains the params for creating firewall object service
@@ -25,11 +25,14 @@ type JSONFirewallObjectService struct {
 
 // CreateUpdateFirewallObjectService is for creating/updating the firewall object service
 // Input:
-//   @params: infor needed
-//   @method: operation method, "add" or "update"
-//   @adom: adom
+//
+//	@params: infor needed
+//	@method: operation method, "add" or "update"
+//	@adom: adom
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) CreateUpdateFirewallObjectService(params *JSONFirewallObjectService, method, adom string) (err error) {
 	defer c.Trace("CreateUpdateFirewallObjectService")()
 
@@ -50,11 +53,14 @@ func (c *FmgSDKClient) CreateUpdateFirewallObjectService(params *JSONFirewallObj
 
 // ReadFirewallObjectService is for reading the specific firewall object service
 // Input:
-//   @name: firewall object service name
-//   @adom: adom
+//
+//	@name: firewall object service name
+//	@adom: adom
+//
 // Output:
-//   @out: firewall object service infor
-//   @err: error details if failure, and nil if success
+//
+//	@out: firewall object service infor
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) ReadFirewallObjectService(adom, name string) (out *JSONFirewallObjectService, err error) {
 	defer c.Trace("ReadFirewallObjectService")()
 
@@ -122,10 +128,13 @@ func (c *FmgSDKClient) ReadFirewallObjectService(adom, name string) (out *JSONFi
 
 // DeleteFirewallObjectService is for deleting the specific firewall object service
 // Input:
-//   @adom: adom
-//   @name: firewall object service name
+//
+//	@adom: adom
+//	@name: firewall object service name
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) DeleteFirewallObjectService(adom, name string) (err error) {
 	defer c.Trace("DeleteFirewallObjectService")()
 

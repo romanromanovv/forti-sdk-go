@@ -3,7 +3,7 @@ package fmgclient
 import (
 	"fmt"
 
-	"github.com/fortinetdev/forti-sdk-go/fortimanager/util"
+	"github.com/romanromanovv/forti-sdk-go/fortimanager/util"
 )
 
 // JSONFirewallObjectIppool contains the params for creating firewall object ippool
@@ -20,11 +20,14 @@ type JSONFirewallObjectIppool struct {
 
 // CreateUpdateFirewallObjectIppool is for creating/updating the firewall object ippool
 // Input:
-//   @params: infor needed
-//   @method: operation method, "add" or "update"
-//   @adom: adom
+//
+//	@params: infor needed
+//	@method: operation method, "add" or "update"
+//	@adom: adom
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) CreateUpdateFirewallObjectIppool(params *JSONFirewallObjectIppool, method, adom string) (err error) {
 	defer c.Trace("CreateUpdateFirewallObjectIppool")()
 
@@ -45,11 +48,14 @@ func (c *FmgSDKClient) CreateUpdateFirewallObjectIppool(params *JSONFirewallObje
 
 // ReadFirewallObjectIppool is for reading the specific firewall object ippool
 // Input:
-//   @name: firewall object ippool name
-//   @adom: adom
+//
+//	@name: firewall object ippool name
+//	@adom: adom
+//
 // Output:
-//   @out: firewall object ippool infor
-//   @err: error details if failure, and nil if success
+//
+//	@out: firewall object ippool infor
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) ReadFirewallObjectIppool(adom, name string) (out *JSONFirewallObjectIppool, err error) {
 	defer c.Trace("ReadFirewallObjectIppool")()
 
@@ -105,10 +111,13 @@ func (c *FmgSDKClient) ReadFirewallObjectIppool(adom, name string) (out *JSONFir
 
 // DeleteFirewallObjectIppool is for deleting the specific firewall object ippool
 // Input:
-//   @adom: adom
-//   @name: firewall object ippool name
+//
+//	@adom: adom
+//	@name: firewall object ippool name
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) DeleteFirewallObjectIppool(adom, name string) (err error) {
 	defer c.Trace("DeleteFirewallObjectIppool")()
 

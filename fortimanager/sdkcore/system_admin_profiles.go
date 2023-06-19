@@ -3,7 +3,7 @@ package fmgclient
 import (
 	"fmt"
 
-	"github.com/fortinetdev/forti-sdk-go/fortimanager/util"
+	"github.com/romanromanovv/forti-sdk-go/fortimanager/util"
 )
 
 // JSONSysAdminProfileGenernal contains the params for creating system admin profiles with genernal part
@@ -63,10 +63,13 @@ type JSONSysAdminProfiles struct {
 
 // CreateUpdateSystemAdminProfiles is for creating or updating the system admin profiles
 // Input:
-//   @params: infor needed
-//   @method: operation method, "add" or "update"
+//
+//	@params: infor needed
+//	@method: operation method, "add" or "update"
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) CreateUpdateSystemAdminProfiles(params *JSONSysAdminProfiles, method string) (err error) {
 	defer c.Trace("CreateUpdateSystemAdminProfiles")()
 
@@ -87,10 +90,13 @@ func (c *FmgSDKClient) CreateUpdateSystemAdminProfiles(params *JSONSysAdminProfi
 
 // ReadSystemAdminProfiles is for reading the system admin profiles
 // Input:
-//   @id: admin profile id
+//
+//	@id: admin profile id
+//
 // Output:
-//   @out: admin profile infor
-//   @err: error details if failure, and nil if success
+//
+//	@out: admin profile infor
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) ReadSystemAdminProfiles(id string) (out *JSONSysAdminProfiles, err error) {
 	defer c.Trace("ReadSystemAdminProfiles")()
 
@@ -221,9 +227,12 @@ func (c *FmgSDKClient) ReadSystemAdminProfiles(id string) (out *JSONSysAdminProf
 
 // DeleteSystemAdminProfiles is for deleting the specific admin profile
 // Input:
-//   @id: admin profile id
+//
+//	@id: admin profile id
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) DeleteSystemAdminProfiles(id string) (err error) {
 	defer c.Trace("DeleteSystemAdminProfiles")()
 

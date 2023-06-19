@@ -3,7 +3,7 @@ package fmgclient
 import (
 	"fmt"
 
-	"github.com/fortinetdev/forti-sdk-go/fortimanager/util"
+	"github.com/romanromanovv/forti-sdk-go/fortimanager/util"
 )
 
 // JSONFirewallSecurityPolicyPackage contains the params for creating firewall policy package
@@ -16,14 +16,16 @@ type JSONFirewallSecurityPolicyPackage struct {
 
 // CreateUpdateFirewallSecurityPolicyPackage is for creating/updating the firewall security policy package
 // Input:
-//   @params: infor needed
-//   @adom: adom
-//   @method: operation method, "add" or "update"
+//
+//	@params: infor needed
+//	@adom: adom
+//	@method: operation method, "add" or "update"
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) CreateUpdateFirewallSecurityPolicyPackage(params *JSONFirewallSecurityPolicyPackage, method, adom string) (err error) {
 	defer c.Trace("CreateUpdateFirewallSecurityPolicyPackage")()
-
 
 	d := map[string]interface{}{
 		"name": params.Name,
@@ -63,10 +65,13 @@ func (c *FmgSDKClient) CreateUpdateFirewallSecurityPolicyPackage(params *JSONFir
 
 // DeleteFirewallSecurityPolicyPackage is for deleting the specific firewall security policy package
 // Input:
-//   @adom: adom
-//   @name: policy package name
+//
+//	@adom: adom
+//	@name: policy package name
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) DeleteFirewallSecurityPolicyPackage(adom, name string) (err error) {
 	defer c.Trace("DeleteFirewallSecurityPolicyPackage")()
 
@@ -85,11 +90,14 @@ func (c *FmgSDKClient) DeleteFirewallSecurityPolicyPackage(adom, name string) (e
 
 // ReadFirewallSecurityPolicyPackage is for reading the specific firewall security policy package
 // Input:
-//   @adom: adom
-//   @name: policy package name
+//
+//	@adom: adom
+//	@name: policy package name
+//
 // Output:
-//   @out: policy package infor
-//   @err: error details if failure, and nil if success
+//
+//	@out: policy package infor
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) ReadFirewallSecurityPolicyPackage(adom, name string) (out *JSONFirewallSecurityPolicyPackage, err error) {
 	defer c.Trace("ReadFirewallSecurityPolicyPackage")()
 

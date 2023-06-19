@@ -3,7 +3,7 @@ package fmgclient
 import (
 	"fmt"
 
-	"github.com/fortinetdev/forti-sdk-go/fortimanager/util"
+	"github.com/romanromanovv/forti-sdk-go/fortimanager/util"
 )
 
 // JSONDVMScript contains the params for creating the script
@@ -17,11 +17,14 @@ type JSONDVMScript struct {
 
 // CreateUpdateDVMScript is for creating/updating the script
 // Input:
-//   @params: infor needed
-//   @method: operation method, "add" or "update"
-//   @adom: adom
+//
+//	@params: infor needed
+//	@method: operation method, "add" or "update"
+//	@adom: adom
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) CreateUpdateDVMScript(params *JSONDVMScript, method, adom string) (err error) {
 	defer c.Trace("CreateUpdateDVMScript")()
 
@@ -42,11 +45,14 @@ func (c *FmgSDKClient) CreateUpdateDVMScript(params *JSONDVMScript, method, adom
 
 // ReadDVMScript is for reading the script infor
 // Input:
-//   @adom: adom
-//   @id: script name
+//
+//	@adom: adom
+//	@id: script name
+//
 // Output:
-//   @out: script infor
-//   @err: error details if failure, and nil if success
+//
+//	@out: script infor
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) ReadDVMScript(adom, id string) (out *JSONDVMScript, err error) {
 	defer c.Trace("ReadDVMScript")()
 
@@ -85,10 +91,13 @@ func (c *FmgSDKClient) ReadDVMScript(adom, id string) (out *JSONDVMScript, err e
 
 // DeleteDVMScript is for deleting the related script
 // Input:
-//   @adom: adom
-//   @id: script name
+//
+//	@adom: adom
+//	@id: script name
+//
 // Output:
-//   @err: error details if failure, and nil if success
+//
+//	@err: error details if failure, and nil if success
 func (c *FmgSDKClient) DeleteDVMScript(adom, id string) (err error) {
 	defer c.Trace("DeleteDVMScript")()
 

@@ -3,7 +3,7 @@ package config
 import (
 	"net/http"
 
-	"github.com/fortinetdev/forti-sdk-go/fortianalyzer/auth"
+	"github.com/romanromanovv/forti-sdk-go/fortianalyzer/auth"
 )
 
 // Config provides configuration to a FAZ client instance
